@@ -1,0 +1,201 @@
+/* Общие стили */
+
+@font-face {
+    font-family: "Ysabeau Office";
+    src: url("../fonts/YsabeauOffice.ttf");
+}
+
+/*@font-face {*/
+/*    font-family: "Lora";*/
+/*    src: url("../fonts/Lora.ttf");*/
+/*}*/
+
+body {
+    background-color: #ffffff; /* Белый цвет фона */
+    color: #000000; /* Цвет текста на фоне */
+    font-family: "Ysabeau Office", Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для хедера */
+
+.header {
+    background-color: #f0f2f5; /* Серый цвет фона */
+    padding: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #606770; /* Цвет заголовка */
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 0;
+    color: #606770; /* Цвет текста */
+    font-size: 18px;
+}
+
+
+/* Стили для карточки сотрудника */
+
+.employee-card {
+    background-color: #f0f2f5; /* Серый цвет фона */
+    color: #606770; /* Цвет текста */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee-card img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.employee-card .employee-info {
+    margin-left: 20px;
+}
+
+.employee-card h2 {
+    color: #606770; /* Цвет заголовка */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.employee-card p {
+    margin-bottom: 5px;
+    color: #606770; /* Цвет текста */
+}
+
+
+/* Стили для списка целей */
+.goals {
+    margin-top: 20px;
+}
+
+.goals h3 {
+    color: #606770; /* Зеленый цвет */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.goal-name {
+    flex-grow: 1;
+    color: #606770;
+}
+
+.goal-count {
+    background-color: #606770;
+    color: #ffffff; /* Белый цвет текста */
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.goal-progress {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #606770;
+}
+
+.total-progress {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+    color: #606770;
+}
+
+
+/* Стили для раздела "Оценка показателей эффективности работы сотрудника" */
+
+.evaluation {
+    margin-top: 20px;
+}
+
+.evaluation h2 {
+    color: #606770; /* Цвет заголовка */
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.evaluation h3 {
+    color: #606770;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    margin-bottom: 5px;
+    color: #606770; /* Цвет текста */
+}
+
+/* Стили для раздела "Рекомендации по улучшению работы сотрудника" */
+
+.recommendations {
+    margin-top: 20px;
+}
+
+.recommendations h3 {
+    color: #606770; /* Цвет заголовка */
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recommendations ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #606770; /* Цвет текста */
+}
+
+.recommendations li {
+    margin-bottom: 5px;
+}
+
+/* Стили для футера */
+
+.footer {
+    background-color: #f0f2f5;
+    padding: 20px;
+    text-align: center;
+    color: #606770;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #4267B2;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+

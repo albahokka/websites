@@ -1,0 +1,72 @@
+{% load static %}
+
+
+<html>
+<head>
+    <title>Статистическая карточка сотрудника</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="all">
+</head>
+<body>
+    <div class="header">
+            <h1>PortfolioTracker</h1>
+        <p>Здесь можно увидеть выполнение целей за месяц</p>
+    </div>
+
+    <form method="get">
+        {{ form }}
+        <input type="submit" value="Выбрать">
+    </form>
+
+    <div class="employee-card">
+<!--        <img src="{{ employee_photo_path }}" alt="Фотография">-->
+<!--        <img src="C:\Users\Albinus\Desktop\Sber\фото.png" alt="Фотография {{ employees_list.first.full_name }}">-->
+        <div class="employee-info">
+            {% if employees_list %}
+                <h2> {{ employees_list.first.full_name }} </h2>
+                <p>  Должность: <span class="job-title">{{ employees_list.first.position }}</span>  </p>
+                <p>  Город: <span class="city">{{ employees_list.first.city }}</span>  </p>
+                <p>  Стаж работы (месяцев): <span class="experience">{{ employees_list.first.months_worked }}</span>  </p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="goals">
+        <h3>Цели на <span id="month">{{ actions_list.first.month|lower }}</span></h3>
+        <ul class="goals-list">
+            {% for action in actions_list %}
+                <li class="goal-item">
+                    <span class="goal-name">{{ action.action_name }}</span>
+                    <span class="goal-count">{{ action.countt }}</span>
+                    <span class="goal-progress">/{{ action.target_count }}</span>
+                </li>
+            {% empty %}
+                <li class="goal-item">Нет информации</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="evaluation">
+      <h2>Оценка показателей эффективности работы сотрудника</h2>
+
+      <h3>Количество выполненных задач</h3>
+      <ul class="task-list">
+          <li>Успешно выполнено: {{ completed_tasks }} ({{ completed_percentage }}%)</li>
+          <li>Невыполнено: {{ failed_tasks }} ({{ failed_percentage }}%)</li>
+      </ul>
+
+    <div class="recommendations">
+    <h3>Рекомендации по улучшению работы сотрудника</h3>
+    <ul>
+        <li>Больше времени уделять выполнению задач, в которых он показывает наилучшие результаты, например, в звонках клиенту и проверке документов.</li>
+        <li>Подготовить и провести тренинги для сотрудника по эффективному планированию времени и приоритизации задач.</li>
+        <li>Обучение сотрудника применению инструментов автоматизации задач, например, CRM-системы, для снижения времени, затрачиваемого на выполнение задач.</li>
+        <li>Разработать сотруднику индивидуальный план по профессиональному развитию в области финансовой аналитики и моделирования.</li>
+    </ul>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 PortfolioTracker. Все права защищены. | <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    </div>
+
+</body>
+</html>
